@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5e8"
     tools:context=".View.MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="125dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="73dp"
-        android:layout_marginBottom="37dp"
-        android:gravity="center_vertical"
-        android:text="Welcome"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/displayName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/displayName"
-        android:layout_width="157dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="146dp"
-        android:layout_marginBottom="155dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/logout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/displayEmail"
-        android:layout_width="323dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="453dp"
-        android:text="TextView"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayName" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="347dp"
-        android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayName" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="To Do List"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/deleteAll"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#FF5722"
+            android:text="X"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            tools:listitem="@layout/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/circular_button"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </FrameLayout>
+</LinearLayout>

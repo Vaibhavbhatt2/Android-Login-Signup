@@ -8,5 +8,10 @@
     <string name="button_login">LOGIN</string>
     <string name="registration">REGISTER</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="change_password">Change Password</string>
+    <string name="enter_new_password">Enter new Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="your_task_will_go_here">your task will go here</string>
+    <string name="priority_high">Priority - High</string>
 
 </resources>

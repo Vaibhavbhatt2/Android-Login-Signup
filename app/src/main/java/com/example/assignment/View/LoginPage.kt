@@ -35,6 +35,9 @@ class LoginPage : AppCompatActivity() {
         Toast.makeText(this,"Connected", Toast.LENGTH_LONG).show()
 
 
+        
+
+
 
         register_Btn.setOnClickListener{
 
